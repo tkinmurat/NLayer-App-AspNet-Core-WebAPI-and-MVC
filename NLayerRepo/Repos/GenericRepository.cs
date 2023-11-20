@@ -9,7 +9,7 @@ namespace NLayerRepo.Repos
         protected readonly AppDBContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public GenericRepository(AppDBContext context, DbSet<T> dbSet)
+        public GenericRepository(AppDBContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();

@@ -13,10 +13,12 @@ namespace NLayerService.Mapping
     {
         public MapProfile()
         {
-            CreateMap<Product, ProductDTO>();
-            CreateMap<Category, CategoryDTO>();
-            CreateMap<ProductFeature, ProductFeatureDTO>();
+            CreateMap<Product, ProductDTO>().ReverseMap();
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<ProductFeature, ProductFeatureDTO>().ReverseMap();
             CreateMap<ProductUpdateDTO, Product>();
+            CreateMap<Product, ProductWithCategoryDTO>();
+            CreateMap<Category, CategoryWithProductsDTO>();
         }
     }
 }
